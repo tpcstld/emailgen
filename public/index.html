@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello People</title>
+        <title>Email Generator</title>
         <link rel="stylesheet" href="/static/foundation.min.css">
         <link rel="stylesheet" href="/static/index.css">
     </head>
@@ -12,29 +12,41 @@
             </div>
         </div> 
         <form method="get" action="/generate">
-            <div class="row collapse">
-                <div class="small-1 medium-offset-3 columns">
-                    <span class="prefix">@</span>
-                </div>
-                <div class="small-11 medium-5 columns end">
-                    <input type="text" name="domain" placeholder="hotmail.com" value="hotmail.com">
+            <div class="row">
+                <div class="small-12 medium-6 medium-offset-3 small-centered columns">
+                    <div class="row collapse">
+                        <div class="small-1 columns">
+                            <label>Domain
+                                <span class="prefix">@</span>
+                            </label>
+                        </div>
+                        <div class="small-11 columns end">
+                            <label>&nbsp;
+                                <input type="text" name="domain" placeholder="hotmail.com" value="hotmail.com">
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="small-4 medium-2 medium-offset-3 columns">
-                    <label># Addresses
-                        <input max="1000000" type="number" name="count" placeholder="0" value="10">
-                    </label>
-                </div>
-                <div class="small-4 medium-2 columns">
-                    <label>Seperator
-                        <input type="text" name="sep" placeholder="None" value=", ">
-                    </label>
-                </div>
-                <div class="small-4 medium-2 columns end">
-                    <label>Length
-                        <input max="1000" type="number" name="length" placeholder="0" value="10">
-                    </label>
+                <div class="small-12 medium-6 small-centered columns">
+                    <div class="row">
+                        <div class="small-4 columns">
+                            <label># Addresses
+                                <input max="1000000" type="number" name="count" placeholder="0" value="10">
+                            </label>
+                        </div>
+                        <div class="small-4 columns">
+                            <label>Seperator
+                                <input type="text" name="sep" placeholder="None" value=", ">
+                            </label>
+                        </div>
+                        <div class="small-4 columns end">
+                            <label>Length
+                                <input max="1000" type="number" name="length" placeholder="0" value="10">
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
