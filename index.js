@@ -18,12 +18,13 @@ app.get("/generate", function( request, response ) {
     var numberAddresses = Math.min( queryParams["count"], MAX_ADDRESSES );
     var seperator = queryParams["sep"];
     var length = Math.min( queryParams["length"], MAX_LENGTH );
+    response.setHeader('Content-Type', 'text/plain');
     response.send( generate( domain, numberAddresses, seperator, length ) );
 });
 
 
 app.get('/*', function( request, response) {
-    response.status(404).send("Page not Found");
+    response.status(404).send("404 Page Not Found");
 });
 
 app.listen(app.get('port'), function() {

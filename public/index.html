@@ -2,9 +2,50 @@
 <html>
     <head>
         <title>Hello People</title>
+        <link rel="stylesheet" href="/static/foundation.min.css">
+        <link rel="stylesheet" href="/static/index.css">
     </head>
     <body>
-        <span>This is a test.</span>
-        <span>More tests.</span>
+        <div class="row">
+            <div id="title-row" class="small-12 columns text-center">
+                <h1>Email Generator</h1>
+            </div>
+        </div> 
+        <form method="get" action="/generate">
+            <div class="row collapse">
+                <div class="small-1 medium-offset-3 columns">
+                    <span class="prefix">@</span>
+                </div>
+                <div class="small-11 medium-5 columns end">
+                    <input type="text" name="domain" placeholder="hotmail.com" value="hotmail.com">
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-4 medium-2 medium-offset-3 columns">
+                    <label># Addresses
+                        <input max="1000000" type="number" name="count" placeholder="0" value="10">
+                    </label>
+                </div>
+                <div class="small-4 medium-2 columns">
+                    <label>Seperator
+                        <input type="text" name="sep" placeholder="None" value=", ">
+                    </label>
+                </div>
+                <div class="small-4 medium-2 columns end">
+                    <label>Length
+                        <input max="1000" type="number" name="length" placeholder="0" value="10">
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12 columns text-center">
+                    <input type="submit" class="button" value="Generate!"></a>
+                </div>
+            </div>
+        </form>
+
+        <script type="text/javascript" src="/static/jquery.js"></script>
+        <script type="text/javascript" src="/static/foundation.min.js"></script>
+        <script>$(document).foundation();</script>
     </body>
 </html>
