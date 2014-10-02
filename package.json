@@ -1,5 +1,5 @@
 {
-  "name": "Email Generator",
+  "name": "Email-Generator",
   "version": "0.1.2",
   "description": "Generates email addresses in bulk",
   "main": "index.js",
